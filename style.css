@@ -460,18 +460,7 @@ main section {
         /* height: 100vh; */
     }
 
-    .navegador .menu_open:target {
-        display: none;
-    }
 
-    #menu_open {
-        display: inline-block;
-        position: relative;
-        /* top: 1.4rem; */
-        /* padding-right: 1rem; */
-        /* margin-right: 1.2rem; */
-        /* margin: auto; */
-    }
 
 }
 
@@ -566,9 +555,6 @@ main section {
         display:none;
     }
 
-    .menu_close{
-        display: none;
-    }
 
     .navegador .menu_container{
         display: flex;
