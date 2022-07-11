@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -26,6 +26,22 @@
                     <a href="#portafolio_section"><div>Portfolio</div></a>
                     <a href="#contact_section"><div>Contact</div></a>
                 </section>
+
+                <section id="menuLateral" class="menuHide">
+                <!-- <section id="menuLateral" class="menuShow"> -->
+                    <a href="#home_section"><div>Home</div></a>
+                    <a href="#about_section"><div>About</div></a>
+                    <a href="#skills_section"><div>Skills</div></a>
+                    <a href="#portafolio_section"><div>Portfolio</div></a>
+                    <a href="#contact_section"><div>Contact</div></a>
+                </section>
+
+
+
+                <div class="burguerBx">
+                    <input type="checkbox" id="burguer" class="hidenbar">
+                    <label for="burguer" class="lbl-burguer"><i class="fa-solid fa-bars"></i></label>
+                </div>
             </nav>
         </section>
 
@@ -34,7 +50,7 @@
         <section class="home_section" id="home_section">
             <div class="home_container">
                 <h2 class="shortname"><span class="hola">Hi!, </span> <span>I'm Ricardo Cordovilla</span> </h2>
-                <h1 class="home_title">Full Stack Developer and Web Developer</h1>
+                <h1 class="home_title" id="home_title">Full Stack Developer and Web Developer</h1>
                 <p class="home_description">
                     //Front and Backend Web developer, graduated in <span class="academlo_text">{<a
                             href="https://academlo.com" target="_blank">Academlo</a>}</span>
@@ -121,12 +137,12 @@
                 Porojects
             </h3>
             <div class="projects_container">
-                <a href="#"><img src="images/proyecto1.jpeg" alt=""></a>
-                <a href="#"><img src="images/proyecto2.jpg" alt=""></a>
-                <a href="#"><img src="images/proyectoecomerce.jpg" alt=""></a>
-                <a href="#"><img src="images/proyectoecomerce2.jpg" alt=""></a>
-                <a href="#"><img src="images/proyectoecomerce3.jpg" alt=""></a>
-                <a href="#"><img src="images/proyectoecomerce4.png" alt=""></a>
+                <div><a href="#"><img src="images/proyecto1.jpeg" alt=""></a></div>
+                <div><a href="#"><img src="images/proyecto2.jpg" alt=""></a></div>
+                <div><a href="#"><img src="images/proyectoecomerce.jpg" alt=""></a></div>
+                <div><a href="#"><img src="images/proyectoecomerce2.jpg" alt=""></a></div>
+                <div><a href="#"><img src="images/proyectoecomerce3.jpg" alt=""></a></div>
+                <div><a href="#"><img src="images/proyectoecomerce4.png" alt=""></a></div>
             </div>
         </section>
 
@@ -138,6 +154,8 @@
                 <button class="btn_wts"><i class='bx bxl-whatsapp'></i></button>
             </div>
         </section>
+
+        
     </main>
 
 
@@ -146,6 +164,10 @@
         <p>Author: &copy; Ricardo Cordovilla - 2022
     </footer>
 
+
+
+    <script src="animacion.js"></script>
 </body>
 
 </html>
+
