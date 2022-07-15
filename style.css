@@ -44,11 +44,9 @@ html {
  */
 
 
-.hidenbar{
-    display: none;
-}
+
 body {
-    max-width: 95vw;
+    max-width: 1024px;
     font-family: 'Comfortaa', cursive;
     font-weight: 700;
     margin: 0;
@@ -74,61 +72,75 @@ h3 {
 
 
 .navbar {
-    width: 95vw;
-    justify-content: space-between;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 1fr;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding-top: 0;
     background-color: var(--negro_transparente);
-    z-index: 2;
-    backdrop-filter: blur(3px);
-    align-items: center;
-    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
 
-    /* box-shadow:  0px 1px 50px 2px rgba(7, 9, 36, 0.81); */
+.navegador{
+    margin: 0;
+    text-align: right;
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    width: 100%;
+    z-index: 3;
+}
 
+
+.menu_container{ 
+    width: 100%;
+    background-color: var(--negro);
+    transition:right 0.5s;
+    position: fixed;
+    display: block;
+    right: -100%;
+    
+
+}
+
+
+.menu_container a{
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.oculto{
+    display: none;
 }
 
 .burguerBx{
     align-self: center;
     justify-self: center;
     padding-right: 1.5vw;
+    margin-left: auto;
 }
 
 
-.menuHide{
-    right: -120%;
+.burguerBar:checked+label+.menu_container{
+    right: 50px;
 }
+
 
 .ricardodev_container {
     padding: 1rem 0;
     margin-top: 0.2rem;
     margin-left: 2rem;
     display: inline;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .ricardo_text {
-    color: var(--azul-claro);
+    color: var(--blanco);
     font-weight: 700;
 }
 
 .dev_text {
     font-weight: 700;
 }
-
-
-.menu_container{
-    display: none;
-}
-
-
-
 
 
 .home_section {
@@ -390,7 +402,7 @@ h3 {
 }
 
 
-button {
+.contacts_container a {
     background: var(--azul-dark);
     border: solid 1px var(--blanco_azul);
     padding: 0.5rem 1rem;
@@ -447,27 +459,35 @@ main section {
 
 @media screen and (min-width: 700px) {
 
-    .menuHide{
-        right: -120%;
-    }
 
-    .burguerBx{
+    .navegador{
+        position: initial;
+    }
+    .burgerBarIcon{
         display: none;
     }
 
-    .navegador{
-        padding-right: 1rem;
+    .menu_container{
+        display: flex;
+        flex-direction: row;
+        right: 0;
+        background-color: transparent;
+        position: relative;
+        justify-content: flex-end;
+        gap:0.5rem;
     }
 
-    .menu_container{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(5,1fr);
-        grid-template-rows: 1fr;
-        gap: 0.5rem;
-        text-align: center;
-        font-size: 0.9rem;
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
+    .burguerBx{
+        margin-left: 2rem;
+        right: 0;
+        padding-left: 1rem;
+    }
+
 
     .home_title {
         max-width: 650px;
@@ -644,7 +664,7 @@ main section {
 }
 
 
-.navegador a div:hover {
+.navegador a:hover {
     color: var(--blanco);
     background-color: var(--purpura);
     text-decoration: none;
@@ -673,37 +693,6 @@ main section {
     cursor: pointer;
 }
 
-.menuHide{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top:3rem;
-    right: -120%;
-    text-align: right;
-    gap: 1rem;
-    background: var(--azul-dark);
-    padding: 1rem;
-    width: 100vw;
-    height: 100vh;
-    transition: 0.5s ease-in-out;
-}
-
-.menuShow{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top:3rem;
-    right: 0;
-    text-align: right;
-    gap: 1rem;
-    background: var(--azul-dark);
-    padding: 1rem;
-    width: 100vw;
-    height: 100vh;
-    transition: 0.5s ease-in-out;
-}
-
-
 
 
 a{
@@ -711,4 +700,63 @@ a{
 }
 a:visited{
     color: aliceblue;
+}
+
+body {
+    max-width: 1024px;}
+
+    
+html{
+    background-color: var(--negro);
+}
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: var(--negro_transparente); */
+    background-color: var(--blanco);
+    backdrop-filter: blur(5px);
+    filter: opacity(0.5);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    
+}
+
+.mensaje{
+    width: 60vw;
+    height: 10vh;
+    position: relative;
+    z-index: 100;
+    background-color: black;
+    filter: opacity(1);
+    border-radius: .5rem;
+    box-shadow: 5px 5px 10px black;
+    margin-bottom: 8rem;
+}
+
+
+.mensaje a{
+    
+    top: 0.5rem;
+    width: 60vw;
+    height: 10vh;
+    position: relative;
+    z-index: 100;
+    background-color: black;
+    backdrop-filter: blur(1px);
+    color: white;
+}
+
+
+
+.hideModal{
+    display: none;
 }
