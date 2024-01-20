@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="./images/fotoPerfil.png" />
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/css/shepherd.css" />
+    <script src="https://cdn.jsdelivr.net/npm/shepherd.js@10.0.1/dist/js/shepherd.min.js"></script>
+    <script src="https://shepherdjs.dev/dist/js/shepherd.js"></script>
     <script src="https://kit.fontawesome.com/ce1c52079c.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
@@ -23,8 +26,7 @@
 
     <header>
 
-        <section class="navbar">
-
+        <section class="navbar" id="navbar">
 
             <div class="ricardodev_container">
                 <span>
@@ -150,8 +152,8 @@
                 Porojects
             </h3>
             <div class="projects_container">
-                <div id="revelImg-1"><a href="https://neonquito.com/design" target="_blank"
-                        rel="noopener noreferrer" title="go to design-neonquitocom"><img src="images/neonquitocom.JPG"
+                <div id="revelImg-1"><a href="https://neonquito.com/design" target="_blank" rel="noopener noreferrer"
+                        title="go to design-neonquitocom"><img src="images/neonquitocom.JPG"
                             alt="preview neonquitocom"></a></div>
 
                 <!-- <div id="revelImg-1"><a href="https://ejemploreservasricardo.netlify.app/" target="_blank"
@@ -217,9 +219,12 @@
                 <h2>Ricardo Cordovilla</h2>
                 <h3>Full-stack developer</h3>
                 <ul class="contact">
-                    <li><a href="ricardocordovillaf@gmail.com" target="_blank" rel="noreferrer"><i class='bx bxl-gmail cvicon'></i>ricardocordovillaf@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/ricardo-cordovilla-97a158241/" target="_blank" rel="noreferrer"><i class='bx bxl-linkedin cvicon'></i> ricardocordovilla</a></li>
-                    <li><a href="https://github.com/RicardoCordovilla" target="_blank" rel="noreferrer"><i class='bx bxl-github cvicon'></i> ricardocordovilla</a></li>
+                    <li><a href="ricardocordovillaf@gmail.com" target="_blank" rel="noreferrer"><i
+                                class='bx bxl-gmail cvicon'></i>ricardocordovillaf@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/ricardo-cordovilla-97a158241/" target="_blank"
+                            rel="noreferrer"><i class='bx bxl-linkedin cvicon'></i> ricardocordovilla</a></li>
+                    <li><a href="https://github.com/RicardoCordovilla" target="_blank" rel="noreferrer"><i
+                                class='bx bxl-github cvicon'></i> ricardocordovilla</a></li>
                 </ul>
 
                 <hr>
@@ -304,12 +309,19 @@
     </section>
 
 
-    <script src="animacion.js"></script>
-    <script src="main.js"></script>
 
-    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.min.js"></script>
 
 </body>
+
+<!-- <script>
+    alert("This page is under construction, some links may not work");
+</script> -->
+
+<script src="touranimado.js"></script>
 <script src="html2pdf.bundle.min.js"></script>
+<script src="animacion.js"></script>
+<script src="main.js"></script>
+
+<script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.min.js"></script>
 
 </html>

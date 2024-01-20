@@ -1,6 +1,5 @@
 
 
-
 const btn_cv = document.getElementById('btnCvPreview')
 const closebtn = document.getElementById('closebtn')
 
