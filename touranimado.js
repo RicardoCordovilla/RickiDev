@@ -8,7 +8,7 @@ const tour = new Shepherd.Tour({
         cancelIcon: {
             enabled: true
         },
-        classes: 'shadow-md bg-purple-light',
+        classes: 'shepherd-theme-custom',
         scrollTo: { behavior: 'smooth', block: 'center' }
     }
 });
@@ -16,7 +16,7 @@ const tour = new Shepherd.Tour({
 // Agregar los pasos del tour
 tour.addStep({
     id: 'step1',
-    text: 'Bienvenido a mi sitio web',
+    text: 'Bienvenido a mi sitio web, a continuación te mostraré un tour por el mismo, espero que lo disfrutes. Si deseas saltar el tour, puedes hacerlo dando click en el botón "Cerrar"',
     attachTo: {
         element: '',
         on: 'center'
